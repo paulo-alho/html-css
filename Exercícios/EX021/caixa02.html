@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grouping Tags</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;            
+            background-color: gray;
+            margin: 0px;
+           
+        }
+        
+        header{
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.363);
+        }
+        
+        nav{
+            background-color: rgb(221, 31, 31);
+            padding: 3px;
+            box-shadow: 5px 3px 7px 1px rgba(0, 0, 0, 0.404);           
+        }
+        
+        nav>a{
+            text-decoration: none;
+            padding-right: 50px;
+            color: white;
+            font-weight: bold;
+        }
+
+        nav>a:hover{
+            color: black;
+        }
+        
+        main{   
+            background-color: white;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.404);
+        }
+
+        aside>p{
+            background-color: rgb(65, 119, 173);
+            padding: 5px;
+            margin-bottom: 0px;
+                     
+        }
+        
+        footer{
+            background-color: black;
+            color: white;
+            text-align: center;
+            margin: 0px;
+            padding: 4px;
+        }
+
+        footer>p{
+            font-size: 13px;
+            margin: 0px;
+        }
+
+        #assuntos{
+            font-weight: bold;
+        }           
+      
+        article{
+            background-color: rgb(150, 155, 155);
+            padding: 10px;
+            margin: 0px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Paulo Notícias</h1>
+        <nav>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+            <a href="#">Link</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="assuntos">
+            <p>Esportes Política Tecnologia</p>
+        </section>
+        
+        <section id="noticias">
+            <article>
+                <h2>Notícias sobre o Brasil</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam esse provident architecto excepturi distinctio minus perferendis eligendi consequuntur aliquid dicta nesciunt earum tempore autem recusandae cupiditate suscipit, repellendus, nemo neque!</p>
+                <aside>
+                    <p>Escrito por Sócrates</p>
+                </aside>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por @pauloalho</p>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML</title>
+</head>
+<body>
+    <h1>Imagem dinânmica</h1>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou 
+    simplesmente aumente ou diminua o tamanho do seu navegador</p>
+    
+    <picture><!--Importante criar tag <picture> para carregar imagens -->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png"><!--descrição: caso a tela do dispositivo for até 1050px, irá carregar a imagem TAMANHO P-->
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png"><!--descrição: caso a tela do dispositivo for até 1050px, irá carregar a imagem TAMANHO M-->
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo áuido</h1>
+    <p>Vamos aprender a reproduzir áuido em HTML 5</p>
+
+    <audio preload="metadata" controls loop><!--preload="metadata" para carregar info, controls para carregar botões, loop para repetir o audio. -->
+        <source src="midias/RobotCity.mp3" type="audio/mp3">
+        <source src="midias/RobotCity.ogg" type="audio/ogg"><!--caso o navegador não seja compatível com mp3, o arquivo ogg será carregado-->
+    </audio>
+</body>
+</html>
