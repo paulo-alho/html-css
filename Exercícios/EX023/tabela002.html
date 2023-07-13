@@ -12,16 +12,45 @@
         table{
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
-
+        
         th, td{
             border: 1px solid black;
             padding: 10px;
         }
 
+        tbody>tr:nth-child(2n){ /* efeito zebrado nas linhas*/
+            background-color: lightgrey;
+        }
+        /*
+        2n (a cada duas linha)
+        2n-1 ( a cada duas linhas, volta uma, seria o mesmo que odd)
+        odd (as linha impar)
+        even (as linhas par)
+        */
+
         thead, tfoot{
             background-color: gray;
             color: white;
+        }
+
+        /* EFEITO DE CABEÇALHO ESTÁTICO NO ROLAMENTO DA PÁGINA
+        
+        table{
+            position: relative;
+        }
+
+        thead>tr>th{
+            position: sticky;
+            background-color: gray;
+            top: -1px;
+        }
+        */
+        thead>tr>th{
+            position: sticky;
+            background-color: gray;
+            top: -1px;
         }
 
         td.num{
@@ -35,16 +64,18 @@
     <!--
         hierarquia de Tabelas
         Table = tabela
+            Caption
             Table Row <tr> = linha da tabela
                 Table Header <th> = cabeçalho da tabela
                 Table Data <td>= dados da tabela
     -->
 
     <table>
+        <caption>População das Unidades Federativas do Brasil</caption>
         <thead>
             <tr>
-                <th>Estados</th>
-                <th>População</th>
+                <th scope="col">Estados</th>
+                <th scope="col" style="width: 110px;">População</th>
             </tr>
         </thead>
 
@@ -162,7 +193,7 @@
         <tfoot>
             <tr>
                 <tr>
-                    <th>Total de Habitantes</th>
+                    <th scope="row">Total de Habitantes</th>
                     <td class="num"><strong>203 062 512</strong></td>
                 </tr>
             </tr>
